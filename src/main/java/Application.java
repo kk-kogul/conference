@@ -1,13 +1,11 @@
-import com.kogul.model.Speaker;
 import com.kogul.service.SpeakerService;
-import com.kogul.service.SpeakerServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Application {
     public static void main(String[] args) {
         ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
-
+        System.out.println("Spring context initialized");
         // SpeakerService init replaced by Bean
         // SpeakerService service = new SpeakerServiceImpl();
         SpeakerService service = appContext.getBean("speakerService", SpeakerService.class);
