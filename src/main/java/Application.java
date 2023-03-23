@@ -9,9 +9,10 @@ public class Application {
         // SpeakerService init replaced by Bean
         // SpeakerService service = new SpeakerServiceImpl();
         SpeakerService service = appContext.getBean("speakerService", SpeakerService.class);
-        System.out.println(service);
+//        System.out.println(service);
         System.out.println(service.findAll().get(0).getFirstName());
-        SpeakerService service2 = appContext.getBean("speakerService", SpeakerService.class);
-        System.out.println(service2 );
+        System.out.println(service.findAll().get(0).getSeedNum());
+//        SpeakerService service2 = appContext.getBean("speakerService", SpeakerService.class);
+//        System.out.println(service2 );
     }
 }
